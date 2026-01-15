@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.routes.issues import router as issues_router
+from app.routes.auth import router as auth_router
 from app.middleware.timer import timer_middleware
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -15,4 +16,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(auth_router)
 app.include_router(issues_router)
