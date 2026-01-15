@@ -45,6 +45,7 @@ venv.bak/
 htmlcov/
 .mypy_cache/
 .ruff_cache/
+data
 
 # --- OS & IDEs ---
 .DS_Store
